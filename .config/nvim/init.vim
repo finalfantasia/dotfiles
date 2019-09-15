@@ -3,7 +3,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'eraserhd/parinfer-rust', {'for': 'clojure', 'do': 'cargo build --release'}
 Plug 'junegunn/rainbow_parentheses.vim'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'romainl/flattened'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fireplace', {'for': 'clojure'}
