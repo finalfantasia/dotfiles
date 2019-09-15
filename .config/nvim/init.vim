@@ -64,6 +64,6 @@ let g:airline_theme='solarized'
 map <silent> <C-n> :NERDTreeToggle<CR>
 
 " rainbow parentheses
-let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
+let g:rainbow#pairs=[['(', ')'], ['[', ']'], ['{', '}']]
 call rainbow_parentheses#activate()
 
