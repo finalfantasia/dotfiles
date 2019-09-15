@@ -2,6 +2,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'eraserhd/parinfer-rust', {'for': 'clojure', 'do': 'cargo build --release'}
+Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'romainl/flattened'
 Plug 'scrooloose/nerdtree'
@@ -23,7 +24,7 @@ set noswapfile
 
 set cmdheight=1
 set noshowmode      " hide the default mode text (e.g. -- INSERT -- below the statusline)
-set ruler           " cursort position
+set ruler           " cursor position
 set number          " line numbers on
 set cursorline
 set nowrap
@@ -61,4 +62,8 @@ let g:airline_theme='solarized'
 
 " nerdtree
 map <silent> <C-n> :NERDTreeToggle<CR>
+
+" rainbow parentheses
+let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
+call rainbow_parentheses#activate()
 
