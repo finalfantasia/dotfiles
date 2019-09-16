@@ -32,21 +32,23 @@ set nobackup
 set noswapfile
 
 set cmdheight=1
-set noshowmode      " hide the default mode text (e.g. -- INSERT -- below the statusline)
-set ruler           " cursor position
-set number          " line numbers on
 set cursorline
+set noshowmode      " hide the default mode text (e.g. -- INSERT -- below the statusline)
 set nowrap
+set number          " line numbers on
+set ruler           " cursor position
+set shortmess+=I    " do not show splash message
 
-set nohlsearch
 set ignorecase
+set incsearch
+set nohlsearch
 set smartcase
 
-set smartindent
 set copyindent
+set expandtab
 set shiftwidth=4
 set shiftround      " use multiple of shiftwidh when (un)indenting with '<' and '>'
-set expandtab
+set smartindent
 
 set undolevels=500
 
@@ -57,14 +59,14 @@ set list        " list whitespaces
 set mousehide   " hide mouse while typing
 
 " split windows navigation via ctrl
-nmap <silent> <C-k> :wincmd k<CR>
-nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-h> :wincmd h<CR>
+nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 
 "" ctrl-p
-let g:ctrlp_working_path_mode='ra'
 let g:ctrlp_root_markers=['deps.edn', 'project.clj', 'pom.xml']
+let g:ctrlp_working_path_mode='ra'
 
 "" vim-airline
 let g:airline_theme='solarized'
@@ -85,4 +87,3 @@ autocmd BufEnter * call ncm2#enable_for_buffer()
 
 " see `:help Ncm2PopupOpen`
 set completeopt=noinsert,menuone,noselect
-
