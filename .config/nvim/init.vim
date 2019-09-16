@@ -1,18 +1,27 @@
-" vim-plug
+"" vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'eraserhd/parinfer-rust', {'for': 'clojure', 'do': 'cargo build --release'}
-Plug 'junegunn/rainbow_parentheses.vim'
+" general
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ncm2/ncm2'
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-path'
 Plug 'romainl/flattened'
+Plug 'roxma/nvim-yarp'
 Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-fireplace', {'for': 'clojure'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+" clojure
+Plug 'clojure-vim/async-clj-omni', {'for': 'clojure'}
+Plug 'eraserhd/parinfer-rust', {'for': 'clojure', 'do': 'cargo build --release'}
+Plug 'junegunn/rainbow_parentheses.vim', {'for': 'clojure'}
+Plug 'tpope/vim-fireplace', {'for': 'clojure'}
 
 " add plugins to &runtimepath
 call plug#end()
 
+"" general
 colorscheme flattened_dark
 
 syntax on
@@ -53,17 +62,27 @@ nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 
-" ctrl-p
+"" ctrl-p
 let g:ctrlp_working_path_mode='ra'
 let g:ctrlp_root_markers=['deps.edn', 'project.clj', 'pom.xml']
 
-" vim-airline
+"" vim-airline
 let g:airline_theme='solarized'
 
-" nerdtree
+"" nerdtree
 map <silent> <C-n> :NERDTreeToggle<CR>
 
-" rainbow parentheses
+"" rainbow parentheses
 let g:rainbow#pairs=[['(', ')'], ['[', ']'], ['{', '}']]
-call rainbow_parentheses#activate()
+augroup rainbow_parentheses_for_clojure
+  autocmd!
+  autocmd FileType clojure RainbowParentheses
+augroup END
+
+"" ncm2
+" enable ncm2 for all buffers
+autocmd BufEnter * call ncm2#enable_for_buffer()
+
+" see `:help Ncm2PopupOpen`
+set completeopt=noinsert,menuone,noselect
 
