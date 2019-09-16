@@ -54,6 +54,7 @@ set undolevels=500
 
 set wildignore+=.idea,*.iml,*/target/*,*/generated-sources/*,*.class,*.so,*.swp,*.zip,*.log,*.git,*.project,node_modules,dist,lib
 
+set fcs=eob:\   " hide tilde sign on blank lines
 set list        " list whitespaces
 
 set mousehide   " hide mouse while typing
