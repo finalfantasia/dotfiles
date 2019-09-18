@@ -3,6 +3,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " general
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ervandew/supertab'
 Plug 'romainl/flattened'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
@@ -54,6 +55,8 @@ set list        " list whitespaces
 
 set mousehide   " hide mouse while typing
 
+set completeopt+=longest
+
 " split windows navigation via ctrl
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-j> :wincmd j<CR>
@@ -76,4 +79,7 @@ augroup rainbow_parentheses_for_clojure
   autocmd!
   autocmd FileType clojure RainbowParentheses
 augroup END
+
+"" supertab
+let g:SuperTabDefaultCompletionType="<C-X><C-O>"
 
