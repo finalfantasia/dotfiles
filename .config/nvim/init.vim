@@ -3,11 +3,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " general
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'ncm2/ncm2'
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-path'
 Plug 'romainl/flattened'
-Plug 'roxma/nvim-yarp'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -82,9 +78,3 @@ augroup rainbow_parentheses_for_clojure
   autocmd FileType clojure RainbowParentheses
 augroup END
 
-"" ncm2
-" enable ncm2 for all buffers
-autocmd BufEnter * call ncm2#enable_for_buffer()
-
-" see `:help Ncm2PopupOpen`
-set completeopt=noinsert,menuone,noselect
