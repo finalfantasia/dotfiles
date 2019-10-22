@@ -44,9 +44,17 @@
 ;; }
 
 {:aliases
- {:dot {:extra-paths ["."]}
-
-  :cider {:extra-deps {cider/cider-nrepl {:mvn/version "0.22.3"}}
+ {:cider {:extra-deps {cider/cider-nrepl {:mvn/version "0.22.3"}}
           :main-opts ["--main" "nrepl.cmdline"
-                      "--middleware" "[cider.nrepl/cider-middleware]"]}}}
+                      "--middleware" "[cider.nrepl/cider-middleware]"]}
+
+  :dev {:extra-paths ["dev"]}
+
+  :dot {:extra-paths ["."]}
+
+  :new {:deps {seancorfield/clj-new {:mvn/version "0.7.8"}}
+        :main-opts ["--main" "clj-new.create"]}
+
+  :outdated {:deps {olical/depot {:mvn/version "1.8.4"}}
+             :main-opts ["--main" "depot.outdated.main"]}}}
 

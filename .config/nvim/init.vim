@@ -1,5 +1,6 @@
 "" vim-plug
-call plug#begin('~/.local/share/nvim/plugged')
+let s:plugin_install_directory=stdpath('data') . '/plugged'
+call plug#begin(s:plugin_install_directory)
 
 " general
 Plug 'ctrlpvim/ctrlp.vim'
