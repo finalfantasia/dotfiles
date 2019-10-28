@@ -8,6 +8,7 @@ Plug 'ervandew/supertab'
 Plug 'romainl/flattened'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
