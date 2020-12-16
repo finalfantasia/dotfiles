@@ -64,6 +64,11 @@
                             :accept clojure.core.server/repl
                             :server-daemon false}}
 
+  ;; checks project (deps.edn) for outdated dependencies
+  ;;   clojure -M:outdated
+  :outdated {:extra-deps {antq/antq {:mvn/version "RELEASE"}}
+             :main-opts ["--main" "antq.core"]}
+
   ;; creates an uberjar
   ;;   clojure -M:uberjar
   :uberjar {:replace-deps {uberdeps/uberdeps {:mvn/version "RELEASE"}}
