@@ -44,18 +44,29 @@
 ;; }
 
 {:aliases
- {:dev {:extra-paths ["dev"]}
+ {
+  ;; prepends the "dev" directory to the classpath
+  :dev {:extra-paths ["dev"]}
 
+  ;; prepends the current working directory to the classpath
   :dot {:extra-paths ["."]}
 
-  :new {:deps {seancorfield/clj-new {:mvn/version "RELEASE"}}
-        :main-opts ["--main" "clj-new.create"]}
+  ;; starts a nREPL server
+  ;;   clojure -M:nrepl-server
+  :nrepl-server {:extra-deps {cider/cider-nrepl {:mvn/version "RELEASE"}}
+                 :main-opts ["--main" "nrepl.cmdline"
+                             "--middleware" "[cider.nrepl/cider-middleware]"]}
 
-  :nrepl {:extra-deps {nrepl {:mvn/version "RELEASE"}
-                       cider/cider-nrepl {:mvn/version "RELEASE"}}
-          :main-opts ["--main" "nrepl.cmdline"
-                      "--middleware" "[cider.nrepl/cider-middleware]"]}
+  ;; starts a REPL server at localhost:50505 (or 60606):
+  ;;   clojure -X:repl-server [:port 60606]
+  :repl-server {:exec-fn clojure.core.server/start-server
+                :exec-args {:name "repl-server"
+                            :port 50505
+                            :accept clojure.core.server/repl
+                            :server-daemon false}}
 
-  :uberjar {:deps {uberdeps {:mvn/version "RELEASE"}}
+  ;; creates an uberjar
+  ;;   clojure -M:uberjar
+  :uberjar {:replace-deps {uberdeps/uberdeps {:mvn/version "RELEASE"}}
             :main-opts ["--main" "uberdeps.uberjar"]}}}
 
