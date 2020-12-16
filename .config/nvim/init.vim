@@ -13,6 +13,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " clojure
+Plug 'Olical/conjure', {'for': 'clojure', 'tag': 'v4.9.0'}
 Plug 'eraserhd/parinfer-rust', {'for': 'clojure', 'do': 'cargo build --release'}
 Plug 'junegunn/rainbow_parentheses.vim', {'for': 'clojure'}
 Plug 'tpope/vim-fireplace', {'for': 'clojure'}
