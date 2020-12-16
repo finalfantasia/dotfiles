@@ -66,7 +66,7 @@
 
   ;; checks project (deps.edn) for outdated dependencies
   ;;   clojure -M:outdated
-  :outdated {:extra-deps {antq/antq {:mvn/version "RELEASE"}}
+  :outdated {:replace-deps {antq/antq {:mvn/version "RELEASE"}}
              :main-opts ["--main" "antq.core"]}
 
   ;; creates an uberjar
