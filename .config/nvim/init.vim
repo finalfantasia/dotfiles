@@ -16,7 +16,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'Olical/conjure', {'for': 'clojure', 'tag': 'v4.9.0'}
 Plug 'eraserhd/parinfer-rust', {'for': 'clojure', 'do': 'cargo build --release'}
 Plug 'junegunn/rainbow_parentheses.vim', {'for': 'clojure'}
-Plug 'tpope/vim-fireplace', {'for': 'clojure'}
 
 " add plugins to &runtimepath
 call plug#end()
