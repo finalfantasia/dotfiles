@@ -44,19 +44,19 @@
 ;; }
 
 {:aliases
- {;; prepends the "dev" directory to the classpath
+ {;; prepends "dev" directory to classpath
   :dev {:extra-paths ["dev"]}
 
-  ;; prepends the current working directory to the classpath
+  ;; prepends current working directory to classpath
   :dot {:extra-paths ["."]}
 
-  ;; starts a nREPL server
+  ;; starts nREPL server:
   ;;   clojure -M:nrepl-server
   :nrepl-server {:extra-deps {cider/cider-nrepl {:mvn/version "RELEASE"}}
                  :main-opts ["--main" "nrepl.cmdline"
                              "--middleware" "[cider.nrepl/cider-middleware]"]}
 
-  ;; starts a REPL server at localhost:50505 (or 60606):
+  ;; starts REPL server at localhost:50505 (or 60606):
   ;;   clojure -X:repl-server [:port 60606]
   :repl-server {:exec-fn clojure.core.server/start-server
                 :exec-args {:name "repl-server"
@@ -64,12 +64,12 @@
                             :accept clojure.core.server/repl
                             :server-daemon false}}
 
-  ;; checks project (deps.edn) for outdated dependencies
+  ;; checks project (deps.edn) for outdated dependencies:
   ;;   clojure -M:outdated
   :outdated {:replace-deps {antq/antq {:mvn/version "RELEASE"}}
              :main-opts ["--main" "antq.core"]}
 
-  ;; creates an uberjar
+  ;; creates uberjar:
   ;;   clojure -M:uberjar
   :uberjar {:replace-deps {uberdeps/uberdeps {:mvn/version "RELEASE"}}
             :main-opts ["--main" "uberdeps.uberjar"]}}}
