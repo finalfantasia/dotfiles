@@ -1,8 +1,8 @@
-"" vim-plug
+""" vim-plug
 let s:plugin_install_directory=stdpath('data') . '/plugged'
 call plug#begin(s:plugin_install_directory)
 
-" general
+"" general
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ervandew/supertab'
 Plug 'romainl/flattened'
@@ -12,16 +12,19 @@ Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" clojure
+"" clojure
 Plug 'Olical/conjure', {'for': 'clojure', 'tag': 'v4.9.0'}
 Plug 'eraserhd/parinfer-rust', {'for': 'clojure', 'do': 'cargo build --release'}
 Plug 'junegunn/rainbow_parentheses.vim', {'for': 'clojure'}
 
-" add plugins to &runtimepath
+"" add plugins to &runtimepath
 call plug#end()
 
-"" general
-colorscheme flattened_dark
+
+""" general
+
+"" colorscheme flattened_dark
+colorscheme flattened_light
 
 syntax on
 filetype plugin indent on
@@ -69,6 +72,9 @@ nmap <silent> <C-l> :wincmd l<CR>
 "" leaders
 let mapleader = ";"
 let maplocalleader = ","
+
+
+""" plug-ins
 
 "" ctrl-p
 let g:ctrlp_root_markers=['deps.edn', 'project.clj', 'pom.xml']
