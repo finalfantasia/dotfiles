@@ -67,6 +67,10 @@ nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 
+"" leaders
+let mapleader = ";"
+let maplocalleader = ","
+
 "" ctrl-p
 let g:ctrlp_root_markers=['deps.edn', 'project.clj', 'pom.xml']
 let g:ctrlp_working_path_mode='ra'
