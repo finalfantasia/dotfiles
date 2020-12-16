@@ -44,8 +44,7 @@
 ;; }
 
 {:aliases
- {
-  ;; prepends the "dev" directory to the classpath
+ {;; prepends the "dev" directory to the classpath
   :dev {:extra-paths ["dev"]}
 
   ;; prepends the current working directory to the classpath
