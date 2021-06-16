@@ -1,0 +1,91 @@
+<keymap version="1" name="Mac OS+split+cursive" parent="Mac OS X 10.5+">
+  <action id=":cursive.actions.paredit/backward">
+    <keyboard-shortcut first-keystroke="ctrl meta left" />
+  </action>
+  <action id=":cursive.actions.paredit/backward-down">
+    <keyboard-shortcut first-keystroke="shift ctrl meta down" />
+  </action>
+  <action id=":cursive.actions.paredit/backward-up">
+    <keyboard-shortcut first-keystroke="shift ctrl meta up" />
+  </action>
+  <action id=":cursive.actions.paredit/barf-backwards">
+    <keyboard-shortcut first-keystroke="ctrl meta j" />
+  </action>
+  <action id=":cursive.actions.paredit/barf-forwards">
+    <keyboard-shortcut first-keystroke="ctrl meta k" />
+  </action>
+  <action id=":cursive.actions.paredit/close-curly-and-newline" />
+  <action id=":cursive.actions.paredit/close-paren-and-newline" />
+  <action id=":cursive.actions.paredit/close-square-and-newline" />
+  <action id=":cursive.actions.paredit/copy-as-kill" />
+  <action id=":cursive.actions.paredit/forward">
+    <keyboard-shortcut first-keystroke="ctrl meta right" />
+  </action>
+  <action id=":cursive.actions.paredit/forward-down">
+    <keyboard-shortcut first-keystroke="ctrl meta down" />
+  </action>
+  <action id=":cursive.actions.paredit/forward-up">
+    <keyboard-shortcut first-keystroke="ctrl meta up" />
+  </action>
+  <action id=":cursive.actions.paredit/join" />
+  <action id=":cursive.actions.paredit/kill" />
+  <action id=":cursive.actions.paredit/kill-sexp">
+    <keyboard-shortcut first-keystroke="ctrl meta slash" />
+  </action>
+  <action id=":cursive.actions.paredit/move-form-down" />
+  <action id=":cursive.actions.paredit/move-form-up" />
+  <action id=":cursive.actions.paredit/raise">
+    <keyboard-shortcut first-keystroke="ctrl meta u" />
+  </action>
+  <action id=":cursive.actions.paredit/slurp-backwards">
+    <keyboard-shortcut first-keystroke="ctrl meta h" />
+  </action>
+  <action id=":cursive.actions.paredit/slurp-forwards">
+    <keyboard-shortcut first-keystroke="ctrl meta l" />
+  </action>
+  <action id=":cursive.actions.paredit/splice">
+    <keyboard-shortcut first-keystroke="ctrl meta y" />
+  </action>
+  <action id=":cursive.actions.paredit/split" />
+  <action id=":cursive.actions.paredit/thread-form">
+    <keyboard-shortcut first-keystroke="ctrl meta period" />
+  </action>
+  <action id=":cursive.actions.paredit/unthread-form">
+    <keyboard-shortcut first-keystroke="ctrl meta comma" />
+  </action>
+  <action id=":cursive.actions.paredit/wrap-curly" />
+  <action id=":cursive.actions.paredit/wrap-paren" />
+  <action id=":cursive.actions.paredit/wrap-quotes" />
+  <action id=":cursive.actions.paredit/wrap-square" />
+  <action id=":cursive.editor.actions/show-type" />
+  <action id=":cursive.repl.actions/clear-repl">
+    <keyboard-shortcut first-keystroke="ctrl meta c" />
+  </action>
+  <action id=":cursive.repl.actions/load-file">
+    <keyboard-shortcut first-keystroke="ctrl meta b" />
+  </action>
+  <action id=":cursive.repl.actions/macroexpansion">
+    <keyboard-shortcut first-keystroke="ctrl meta back_slash" />
+  </action>
+  <action id=":cursive.repl.actions/run-last-sexp">
+    <keyboard-shortcut first-keystroke="meta enter" />
+  </action>
+  <action id=":cursive.repl.actions/run-top-sexp">
+    <keyboard-shortcut first-keystroke="shift meta enter" />
+  </action>
+  <action id=":cursive.repl.actions/search-history">
+    <keyboard-shortcut first-keystroke="ctrl meta e" />
+  </action>
+  <action id=":cursive.repl.actions/switch-namespace">
+    <keyboard-shortcut first-keystroke="ctrl meta n" />
+  </action>
+  <action id=":cursive.repl.actions/sync-files">
+    <keyboard-shortcut first-keystroke="ctrl meta m" />
+  </action>
+  <action id="SplitHorizontally">
+    <keyboard-shortcut first-keystroke="alt minus" />
+  </action>
+  <action id="SplitVertically">
+    <keyboard-shortcut first-keystroke="alt back_slash" />
+  </action>
+</keymap>
