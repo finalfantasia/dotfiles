@@ -13,7 +13,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 "" clojure
-Plug 'Olical/conjure', {'for': 'clojure', 'tag': 'v4.9.0'}
+Plug 'Olical/conjure', {'for': 'clojure', 'tag': 'v4.21.0'}
 Plug 'eraserhd/parinfer-rust', {'for': 'clojure', 'do': 'cargo build --release'}
 Plug 'junegunn/rainbow_parentheses.vim', {'for': 'clojure'}
 
@@ -63,7 +63,7 @@ set mousehide   " hide mouse while typing
 
 set completeopt+=longest
 
-" split windows navigation via ctrl
+"" split windows navigation via ctrl
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-k> :wincmd k<CR>
