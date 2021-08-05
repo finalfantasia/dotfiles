@@ -13,7 +13,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 "" clojure
-Plug 'Olical/conjure', {'for': 'clojure', 'tag': 'v4.21.0'}
+Plug 'Olical/conjure', {'for': 'clojure', 'tag': 'v4.22.1'}
 Plug 'eraserhd/parinfer-rust', {'for': 'clojure', 'do': 'cargo build --release'}
 Plug 'junegunn/rainbow_parentheses.vim', {'for': 'clojure'}
 
@@ -23,8 +23,14 @@ call plug#end()
 
 """ general
 
-"" colorscheme flattened_dark
-colorscheme flattened_light
+"" colorscheme
+if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
+  set background=dark
+  colorscheme flattened_dark
+else
+  set background=light
+  colorscheme flattened_light
+endif
 
 syntax on
 filetype plugin indent on
