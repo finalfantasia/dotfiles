@@ -13,9 +13,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 "" clojure
-Plug 'Olical/conjure', {'for': 'clojure', 'tag': 'v4.22.1'}
+Plug 'Olical/conjure', {'for': 'clojure'}
 Plug 'eraserhd/parinfer-rust', {'for': 'clojure', 'do': 'cargo build --release'}
-Plug 'junegunn/rainbow_parentheses.vim', {'for': 'clojure'}
 
 "" add plugins to &runtimepath
 call plug#end()
@@ -91,13 +90,6 @@ let g:airline_theme='solarized'
 
 "" nerdtree
 map <silent> <C-n> :NERDTreeToggle<CR>
-
-"" rainbow parentheses
-let g:rainbow#pairs=[['(', ')'], ['[', ']'], ['{', '}']]
-augroup rainbow_parentheses_for_clojure
-  autocmd!
-  autocmd FileType clojure RainbowParentheses
-augroup END
 
 "" supertab
 let g:SuperTabDefaultCompletionType="<C-X><C-O>"

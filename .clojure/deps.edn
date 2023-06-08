@@ -52,21 +52,21 @@
 
   ;; starts nREPL server:
   ;;   clojure -M:nrepl-server
-  :nrepl-server {:extra-deps {cider/cider-nrepl {:mvn/version "RELEASE"}}
-                 :main-opts ["--main" "nrepl.cmdline"
-                             "--middleware" "[cider.nrepl/cider-middleware]"]}
+  :nrepl {:extra-deps {nrepl/nrepl {:mvn/version "1.0.0"}
+                       cider/cider-nrepl {:mvn/version "0.30.0"}}
+          :main-opts ["--main" "nrepl.cmdline"
+                      "--middleware" "[cider.nrepl/cider-middleware]"]}
+
+  ;; starts a Clojure REPL server that takes its input from the Rebel readline editor:
+  ;;   clojure -M:rebel
+  :rebel {:extra-deps {com.bhauman/rebel-readline {:mvn/version "0.1.4"}}
+          :main-opts  ["--main" "rebel-readline.main"]}
 
   ;; starts REPL server at localhost:50505 (or 60606):
   ;;   clojure -X:repl-server [:port 60606]
-  :repl-server {:exec-fn clojure.core.server/start-server
-                :exec-args {:name "repl-server"
-                            :port 50505
-                            :accept clojure.core.server/repl
-                            :server-daemon false}}
-
-  ;; checks project (deps.edn) for outdated dependencies:
-  ;;   clojure -M:outdated
-  :outdated {:replace-deps {antq/antq {:mvn/version "RELEASE"}
-                            org.slf4j/slf4j-nop {:mvn/version "RELEASE"}}
-             :main-opts ["--main" "antq.core"]}}}
+  :repl {:exec-fn clojure.core.server/start-server
+         :exec-args {:name "repl-server"
+                     :port 50505
+                     :accept clojure.core.server/repl
+                     :server-daemon false}}}}
 
