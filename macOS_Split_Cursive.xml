@@ -1,4 +1,4 @@
-<keymap version="1" name="Mac OS+split+cursive" parent="Mac OS X 10.5+">
+<keymap version="1" name="macOS_Split_Cursive" parent="Mac OS X 10.5+">
   <action id=":cursive.actions.paredit/backward">
     <keyboard-shortcut first-keystroke="ctrl meta left" />
   </action>
@@ -81,6 +81,9 @@
   </action>
   <action id=":cursive.repl.actions/sync-files">
     <keyboard-shortcut first-keystroke="ctrl meta m" />
+  </action>
+  <action id="GotoKeyword">
+    <keyboard-shortcut first-keystroke="shift ctrl k" />
   </action>
   <action id="SplitHorizontally">
     <keyboard-shortcut first-keystroke="alt minus" />
